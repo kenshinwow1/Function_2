@@ -1,29 +1,25 @@
+//Function_2
+
 public class Main {
     public static void main(String[] args) {
-//        info("HeLLo");
-//        String java = "Java";
-//        info(java);
-//        info("");
+byte[] nums1 = new byte[]{5,6,8};
 
-        short num = 7;
-        int result1=summa((short) 5,num);
+int summ1 =  summaArray(nums1);
+        System.out.println("Summa 1:" + summ1);
+
+        byte[] nums2 = new byte[]{3,4,5,6,8};
+        int summ2 =  summaArray(nums2);
+        System.out.println("Summa 2:" + summ2);
 
 
-        short num2 = 8;
-        int result2=summa((short) 4,num2);
-        info(String.valueOf(result2));
-    }
-    public static int summa(short a, short b){
-        int res = a + b;
-        String result = "Result: " + res;
-        info(result);
-        return res;
     }
 
+    public static int summaArray(byte[]arr){
+        int summa = 0;
+        for(byte i = 0; i <arr.length; i++)
+            summa += arr[i];
 
-    public static void info(String word){
-        System.out.print(word);
-        System.out.println("!");
+        return summa;
 
     }
 
